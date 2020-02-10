@@ -18,6 +18,27 @@ document.querySelector("html").addEventListener("keypress", function (event) {
     }
 });
 
+$(".restart").click(function (event) {
+    startOver();
+    if (!started) {
+        $("h1").text("Level " + level);
+        nextSequence();
+        started = true;
+    } else {
+        nextSequence();
+    }
+});
+
+// document.querySelector("html").addEventListener("click", function (event) {
+//     if (!started) {
+//         $("h1").text("Level " + level);
+//         nextSequence();
+//         started = true;
+//     } else {
+//         nextSequence();
+//     }
+// });
+
 
 function nextSequence() {
     userClickedPattern = [];
